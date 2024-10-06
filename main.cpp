@@ -1,8 +1,8 @@
 #include <iostream>
-#include "PhotovolticPanel.hpp"
+#include "PhotovoltaicPanel.hpp"
 using namespace std;
 
 int main(){
-    PhotovolticPanel p1(2,3,5);
+    PhotovoltaicPanel p1(2,3,5);
     cout<<p1.getPowerProduced()<<endl;
 }
