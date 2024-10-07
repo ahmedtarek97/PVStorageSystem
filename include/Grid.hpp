@@ -16,24 +16,38 @@ public:
        const unsigned int &voltage, const unsigned int &frequency);
   unsigned int getPowerSold() const;
   unsigned int getPowerBought() const;
+  /**
+   * @brief Charge the Grid with surplus power
+   *
+   * @param power +ve value in Watts which the Grid will charge with
+   */
+  void charge(int power);
+
+  /**
+   * @brief Discharge the Grid
+   *
+   * @param power -ve value in Watts which the Grid will discharge with
+   *
+   */
+  void discharge(int power);
 
 private:
   /**
    * Power that is sold to the grid in Watts.
    */
-  unsigned int _powerSold;   
+  unsigned int _powerSold;
   /**
    * Power that is bought from the grid in Watts.
    */
-  unsigned int _powerBought; 
+  unsigned int _powerBought;
   /**
    * Grid voltage in Volts.
    */
   unsigned int _voltage;
   /**
-   * Grid frequency in Hertz. 
-   */     
-  unsigned int _frequency;   
+   * Grid frequency in Hertz.
+   */
+  unsigned int _frequency;
 };
 
 #endif // GRID_H

@@ -16,7 +16,7 @@ int main() {
   Inverter i1(1, 2, 3, 4, 5, 6);
   BatteryModule b1(3,6,9);
   EMController c1;
-  StorageSystem ss1(i1,c1,SystemSetup::STANDARD);
+  StorageSystem ss1(i1,SystemSetup::STANDARD);
   cout << p1.getPowerProduced() << endl
        << g1.getPowerSold() << endl
        << g1.getPowerBought() << endl
@@ -24,5 +24,4 @@ int main() {
        << i1.getMaxInverterPower() << endl
        << b1.getPower() << endl
        << (int) ss1.getSystemSetup()<<endl;
-       c1.manageEnergy();
 }

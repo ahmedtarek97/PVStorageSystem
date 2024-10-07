@@ -19,6 +19,22 @@ public:
 
   unsigned int getMaxInverterPower() const;
 
+  /**
+   * @brief Charge the Inverter
+   *
+   * @param power +ve value in Watts which the Inverter will charge with
+   */
+  int charge(int power);
+
+  /**
+   * @brief Discharge the Inverter
+   *
+   * @param power -ve value in Watts which the system will discharge with
+   *
+   * @return
+   */
+  int discharge(int power);
+
 private:
   /**
    * Maximum power that the inverter can charge/discharge in Watts.

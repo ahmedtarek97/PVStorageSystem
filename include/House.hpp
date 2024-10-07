@@ -16,23 +16,23 @@ public:
         const unsigned int &frequency, const unsigned int &current);
   unsigned int getPowerConsumed() const;
 
-private: 
+private:
   /**
-   * Power that is going into the house in Watts. 
+   * Power that is going into the house in Watts.
    */
-  unsigned int _powerConsumed; 
+  unsigned int _powerConsumed;
   /**
    * Voltage of the house grid in Volts.
    */
   unsigned int _voltage;
   /**
-   * Frequency of the house grid in Hertz. 
+   * Frequency of the house grid in Hertz.
    */
   unsigned int _frequency;
   /**
    * Current flowing into the house in Amps.
    */
-  unsigned int _current;       
+  unsigned int _current;
 };
 
 #endif // HOUSE_H

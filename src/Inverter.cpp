@@ -9,6 +9,14 @@ Inverter::Inverter(const unsigned int &maxInverterPower,
       _batteryCurrent(batteryCurrent), _outputPower(outputPower),
       _sensedGridFrequancy(gridFrequancy), _sensedGridVoltage(gridVoltage) {}
 
-unsigned int Inverter::getMaxInverterPower() const {
-    return _maxInverterPower;
+unsigned int Inverter::getMaxInverterPower() const { return _maxInverterPower; }
+
+int Inverter::charge(int power) {
+  _outputPower = power;
+  return power - _maxInverterPower;
+}
+
+int Inverter::discharge(int power) {
+  _outputPower = power;
+  return power + _maxInverterPower;
 }
