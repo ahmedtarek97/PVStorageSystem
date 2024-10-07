@@ -13,8 +13,8 @@
 class Inverter {
 public:
   Inverter(const unsigned int &maxInverterPower,
-           const unsigned int &battaryVoltage,
-           const unsigned int &battaryCurrent, const int &outputPower,
+           const unsigned int &batteryVoltage,
+           const unsigned int &batteryCurrent, const int &outputPower,
            const unsigned int &gridFrequancy, const unsigned int &gridVoltage);
 
   unsigned int getMaxInverterPower() const;
@@ -27,11 +27,11 @@ private:
   /**
    * In Volts.
    */
-  unsigned int _battaryVoltage;
+  unsigned int _batteryVoltage;
   /**
    * Current that is flowing to/from inverter in Amps.
    */
-  unsigned int _battaryCurrent;
+  unsigned int _batteryCurrent;
   /**
    * Power inverter is releasing/storing in the batteries in Watts.
    * If +ve battaries are charging.
