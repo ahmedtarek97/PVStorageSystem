@@ -11,12 +11,12 @@ Inverter::Inverter(const unsigned int &maxInverterPower,
 
 unsigned int Inverter::getMaxInverterPower() const { return _maxInverterPower; }
 
-int Inverter::charge(int power) {
+int Inverter::charge(const int &power) {
   _outputPower = power;
   return power - _maxInverterPower;
 }
 
-int Inverter::discharge(int power) {
+int Inverter::discharge(const int &power) {
   _outputPower = power;
   return power + _maxInverterPower;
 }

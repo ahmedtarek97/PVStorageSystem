@@ -1,0 +1,4 @@
+<map id="StorageSystem" name="StorageSystem">
+<area shape="rect" id="node1" title="Storage system consists of an inverter, a controller and battery modules based on the system setup ...." alt="" coords="5,95,127,121"/>
+<area shape="rect" id="node2" href="$classInverter.html" title="Device inside the Battery in charge of controlling the power flow to the batteries and the values tha..." alt="" coords="29,5,103,32"/>
+</map>

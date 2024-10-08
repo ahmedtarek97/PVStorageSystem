@@ -1,0 +1,126 @@
+\hypertarget{classInverter}{}\doxysection{Inverter Class Reference}
+\label{classInverter}\index{Inverter@{Inverter}}
+
+
+Device inside the Battery in charge of controlling the power flow to the batteries and the values that can be read from it.  
+
+
+
+
+{\ttfamily \#include $<$Inverter.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInverter_a40a2205b7b424f6b009f3b8c26c57c26}\label{classInverter_a40a2205b7b424f6b009f3b8c26c57c26}} 
+{\bfseries Inverter} (const unsigned int \&max\+Inverter\+Power, const unsigned int \&battery\+Voltage, const unsigned int \&battery\+Current, const int \&output\+Power, const unsigned int \&grid\+Frequancy, const unsigned int \&grid\+Voltage)
+\item 
+\mbox{\Hypertarget{classInverter_aaf02f49342c2d5ad06a9acbe1f82ea13}\label{classInverter_aaf02f49342c2d5ad06a9acbe1f82ea13}} 
+unsigned int {\bfseries get\+Max\+Inverter\+Power} () const
+\item 
+int \mbox{\hyperlink{classInverter_a57700a92fed58d311b57d8b83ff2c10f}{charge}} (const int \&power)
+\begin{DoxyCompactList}\small\item\em Charge the \mbox{\hyperlink{classInverter}{Inverter}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInverter_acb0d5abd3fcbb66538352d7483775fa4}{discharge}} (const int \&power)
+\begin{DoxyCompactList}\small\item\em Discharge the \mbox{\hyperlink{classInverter}{Inverter}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classInverter_a51078aa0ed7253b6d6eb7ef17e6640e0}{\+\_\+max\+Inverter\+Power}}
+\item 
+unsigned int \mbox{\hyperlink{classInverter_a701b3535f61452cbdc4ce73283ca18b0}{\+\_\+battery\+Voltage}}
+\item 
+unsigned int \mbox{\hyperlink{classInverter_a729e2c9e37ed077471100970ae433de2}{\+\_\+battery\+Current}}
+\item 
+int \mbox{\hyperlink{classInverter_a278e3a278eecbabc19a7a9398768afef}{\+\_\+output\+Power}}
+\item 
+unsigned int \mbox{\hyperlink{classInverter_aaeff76197febd205e5ab89e5b46cc3ff}{\+\_\+sensed\+Grid\+Frequancy}}
+\item 
+unsigned int \mbox{\hyperlink{classInverter_a785a38fb5388fed7354fbae52dcc0739}{\+\_\+sensed\+Grid\+Voltage}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Device inside the Battery in charge of controlling the power flow to the batteries and the values that can be read from it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInverter_a57700a92fed58d311b57d8b83ff2c10f}\label{classInverter_a57700a92fed58d311b57d8b83ff2c10f}} 
+\index{Inverter@{Inverter}!charge@{charge}}
+\index{charge@{charge}!Inverter@{Inverter}}
+\doxysubsubsection{\texorpdfstring{charge()}{charge()}}
+{\footnotesize\ttfamily int Inverter\+::charge (\begin{DoxyParamCaption}\item[{const int \&}]{power }\end{DoxyParamCaption})}
+
+
+
+Charge the \mbox{\hyperlink{classInverter}{Inverter}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power} & +ve value in Watts which the \mbox{\hyperlink{classInverter}{Inverter}} will charge with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The surplus after charging the batteries with the max power 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInverter_acb0d5abd3fcbb66538352d7483775fa4}\label{classInverter_acb0d5abd3fcbb66538352d7483775fa4}} 
+\index{Inverter@{Inverter}!discharge@{discharge}}
+\index{discharge@{discharge}!Inverter@{Inverter}}
+\doxysubsubsection{\texorpdfstring{discharge()}{discharge()}}
+{\footnotesize\ttfamily int Inverter\+::discharge (\begin{DoxyParamCaption}\item[{const int \&}]{power }\end{DoxyParamCaption})}
+
+
+
+Discharge the \mbox{\hyperlink{classInverter}{Inverter}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power} & -\/ve value in Watts which the system will discharge with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The power needed after discharging the batteries with the max power 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classInverter_a729e2c9e37ed077471100970ae433de2}\label{classInverter_a729e2c9e37ed077471100970ae433de2}} 
+\index{Inverter@{Inverter}!\_batteryCurrent@{\_batteryCurrent}}
+\index{\_batteryCurrent@{\_batteryCurrent}!Inverter@{Inverter}}
+\doxysubsubsection{\texorpdfstring{\_batteryCurrent}{\_batteryCurrent}}
+{\footnotesize\ttfamily unsigned int Inverter\+::\+\_\+battery\+Current\hspace{0.3cm}{\ttfamily [private]}}
+
+Current that is flowing to/from inverter in Amps. \mbox{\Hypertarget{classInverter_a701b3535f61452cbdc4ce73283ca18b0}\label{classInverter_a701b3535f61452cbdc4ce73283ca18b0}} 
+\index{Inverter@{Inverter}!\_batteryVoltage@{\_batteryVoltage}}
+\index{\_batteryVoltage@{\_batteryVoltage}!Inverter@{Inverter}}
+\doxysubsubsection{\texorpdfstring{\_batteryVoltage}{\_batteryVoltage}}
+{\footnotesize\ttfamily unsigned int Inverter\+::\+\_\+battery\+Voltage\hspace{0.3cm}{\ttfamily [private]}}
+
+In Volts. \mbox{\Hypertarget{classInverter_a51078aa0ed7253b6d6eb7ef17e6640e0}\label{classInverter_a51078aa0ed7253b6d6eb7ef17e6640e0}} 
+\index{Inverter@{Inverter}!\_maxInverterPower@{\_maxInverterPower}}
+\index{\_maxInverterPower@{\_maxInverterPower}!Inverter@{Inverter}}
+\doxysubsubsection{\texorpdfstring{\_maxInverterPower}{\_maxInverterPower}}
+{\footnotesize\ttfamily unsigned int Inverter\+::\+\_\+max\+Inverter\+Power\hspace{0.3cm}{\ttfamily [private]}}
+
+Maximum power that the inverter can charge/discharge in Watts. \mbox{\Hypertarget{classInverter_a278e3a278eecbabc19a7a9398768afef}\label{classInverter_a278e3a278eecbabc19a7a9398768afef}} 
+\index{Inverter@{Inverter}!\_outputPower@{\_outputPower}}
+\index{\_outputPower@{\_outputPower}!Inverter@{Inverter}}
+\doxysubsubsection{\texorpdfstring{\_outputPower}{\_outputPower}}
+{\footnotesize\ttfamily int Inverter\+::\+\_\+output\+Power\hspace{0.3cm}{\ttfamily [private]}}
+
+Power inverter is releasing/storing in the batteries in Watts. If +ve battaries are charging. If -\/ve battaries are discharging. \mbox{\Hypertarget{classInverter_aaeff76197febd205e5ab89e5b46cc3ff}\label{classInverter_aaeff76197febd205e5ab89e5b46cc3ff}} 
+\index{Inverter@{Inverter}!\_sensedGridFrequancy@{\_sensedGridFrequancy}}
+\index{\_sensedGridFrequancy@{\_sensedGridFrequancy}!Inverter@{Inverter}}
+\doxysubsubsection{\texorpdfstring{\_sensedGridFrequancy}{\_sensedGridFrequancy}}
+{\footnotesize\ttfamily unsigned int Inverter\+::\+\_\+sensed\+Grid\+Frequancy\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classInverter}{Inverter}} sensed grid frequency in Hertz. \mbox{\Hypertarget{classInverter_a785a38fb5388fed7354fbae52dcc0739}\label{classInverter_a785a38fb5388fed7354fbae52dcc0739}} 
+\index{Inverter@{Inverter}!\_sensedGridVoltage@{\_sensedGridVoltage}}
+\index{\_sensedGridVoltage@{\_sensedGridVoltage}!Inverter@{Inverter}}
+\doxysubsubsection{\texorpdfstring{\_sensedGridVoltage}{\_sensedGridVoltage}}
+{\footnotesize\ttfamily unsigned int Inverter\+::\+\_\+sensed\+Grid\+Voltage\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classInverter}{Inverter}} sensed grid Voltage in Volts. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Inverter_8hpp}{Inverter.\+hpp}}\item 
+src/Inverter.\+cpp\end{DoxyCompactItemize}

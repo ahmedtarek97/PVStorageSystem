@@ -29,13 +29,12 @@ bool StorageSystem::addBatteryModule(const BatteryModule &batteryModule) {
   }
 }
 
-int StorageSystem::charge(int power) {
+int StorageSystem::charge(const int &power) {
   _powerCommand = power;
   return _inverter.charge(power);
 }
 
-int StorageSystem::discharge(int power) { 
-    _powerCommand = power;
-    return _inverter.discharge(power);
-
-    }
+int StorageSystem::discharge(const int &power) {
+  _powerCommand = power;
+  return _inverter.discharge(power);
+}

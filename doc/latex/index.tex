@@ -1,0 +1,37 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+a simulation for a PV storage system and applying energy mangment algorithm\hypertarget{index_autotoc_md1}{}\doxysubsection{Dependencies}\label{index_autotoc_md1}
+Dependancies of this project are\+:
+\begin{DoxyItemize}
+\item g++
+\item cmake
+\item gtest \mbox{[}for testing\mbox{]}
+\item doxgen \mbox{[}for documintaion\mbox{]}
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{Building}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Use the command {\ttfamily ./build.sh} to build the c++ development and testing files also the script will generate doxgen documintation
+\item Use the command {\ttfamily ./test.sh} to run the provided test cases
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{File Structure}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{Project Root}} (This is the main project folder)
+\begin{DoxyItemize}
+\item {\bfseries{build}} \+: This folder is used by {\ttfamily build.\+sh} script to generate files during compilation
+\item {\bfseries{docs}}\+: This folder includes generated doxgen documentation for the prject
+\begin{DoxyItemize}
+\item {\bfseries{index.\+html}}\+: The most relevant file in the folder it contains the documintation in html format
+\end{DoxyItemize}
+\item {\bfseries{include}} This folder contains the header files of the used classes
+\item {\bfseries{src}}\+: This folder contains the implementation files of the used classes
+\item {\bfseries{test}} This folder the unit test files for some classes
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{Future Work\+:}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Imporove Unit test coverage as not all classes are covered
+\item Rechecking the design and avoid violating the dependancy inversion design principle
+\item Add Error handling and use the unsed values(for example\+: checking if a PV and a house have the same frequancy and voltage)
+\item Add Error handling in {\ttfamily build.\+sh} and {\ttfamily test.\+sh} scripts
+\item Integrate real-\/world data or simulate dynamic changes in PV production and house consumption over time. 
+\end{DoxyItemize}

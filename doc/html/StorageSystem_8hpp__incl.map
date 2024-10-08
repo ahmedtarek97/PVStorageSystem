@@ -1,0 +1,6 @@
+<map id="include/StorageSystem.hpp" name="include/StorageSystem.hpp">
+<area shape="rect" id="node1" title="Declaration of the StorageSystem class." alt="" coords="127,5,327,32"/>
+<area shape="rect" id="node2" href="$BatteryModule_8hpp.html" title="Declaration of the BatteryModule class." alt="" coords="5,80,152,107"/>
+<area shape="rect" id="node3" href="$Inverter_8hpp.html" title="Declaration of the Inverter class." alt="" coords="177,80,277,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="301,80,363,107"/>
+</map>

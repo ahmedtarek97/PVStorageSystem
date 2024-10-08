@@ -1,0 +1,107 @@
+\hypertarget{classGrid}{}\doxysection{Grid Class Reference}
+\label{classGrid}\index{Grid@{Grid}}
+
+
+Main connection from the house to the utility provider grid and the values that can be read from it.  
+
+
+
+
+{\ttfamily \#include $<$Grid.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGrid_a6dd65736eedf22168b3de4a169d7992a}\label{classGrid_a6dd65736eedf22168b3de4a169d7992a}} 
+{\bfseries Grid} (const unsigned int \&voltage, const unsigned int \&frequency)
+\item 
+\mbox{\Hypertarget{classGrid_aed1355d14a6980b42f303371104f19cd}\label{classGrid_aed1355d14a6980b42f303371104f19cd}} 
+unsigned int {\bfseries get\+Power\+Sold} () const
+\item 
+\mbox{\Hypertarget{classGrid_aaa965e389f24cc49819ffa94880a9515}\label{classGrid_aaa965e389f24cc49819ffa94880a9515}} 
+unsigned int {\bfseries get\+Power\+Bought} () const
+\item 
+void \mbox{\hyperlink{classGrid_a84d08caf3234771537e7c211fa48e8c2}{charge}} (const int \&power)
+\begin{DoxyCompactList}\small\item\em Charge the \mbox{\hyperlink{classGrid}{Grid}} with surplus power. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGrid_a7d3456096a9a6126ea0ea00b2f581917}{discharge}} (const int \&power)
+\begin{DoxyCompactList}\small\item\em Discharge the \mbox{\hyperlink{classGrid}{Grid}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classGrid_a854dae18966f8cf778a4457d4259f589}{\+\_\+power\+Sold}}
+\item 
+unsigned int \mbox{\hyperlink{classGrid_a7f8ae48b23dff3b305abfacd62833ceb}{\+\_\+power\+Bought}}
+\item 
+unsigned int \mbox{\hyperlink{classGrid_ae4a0956bbe2c46bd90164246a57f9f14}{\+\_\+voltage}}
+\item 
+unsigned int \mbox{\hyperlink{classGrid_a332f4394130089d3bd4a6492803ecc2e}{\+\_\+frequency}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main connection from the house to the utility provider grid and the values that can be read from it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGrid_a84d08caf3234771537e7c211fa48e8c2}\label{classGrid_a84d08caf3234771537e7c211fa48e8c2}} 
+\index{Grid@{Grid}!charge@{charge}}
+\index{charge@{charge}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{charge()}{charge()}}
+{\footnotesize\ttfamily void Grid\+::charge (\begin{DoxyParamCaption}\item[{const int \&}]{power }\end{DoxyParamCaption})}
+
+
+
+Charge the \mbox{\hyperlink{classGrid}{Grid}} with surplus power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power} & +ve value in Watts which the \mbox{\hyperlink{classGrid}{Grid}} will charge with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGrid_a7d3456096a9a6126ea0ea00b2f581917}\label{classGrid_a7d3456096a9a6126ea0ea00b2f581917}} 
+\index{Grid@{Grid}!discharge@{discharge}}
+\index{discharge@{discharge}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{discharge()}{discharge()}}
+{\footnotesize\ttfamily void Grid\+::discharge (\begin{DoxyParamCaption}\item[{const int \&}]{power }\end{DoxyParamCaption})}
+
+
+
+Discharge the \mbox{\hyperlink{classGrid}{Grid}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power} & -\/ve value in Watts which the \mbox{\hyperlink{classGrid}{Grid}} will discharge with \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGrid_a332f4394130089d3bd4a6492803ecc2e}\label{classGrid_a332f4394130089d3bd4a6492803ecc2e}} 
+\index{Grid@{Grid}!\_frequency@{\_frequency}}
+\index{\_frequency@{\_frequency}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{\_frequency}{\_frequency}}
+{\footnotesize\ttfamily unsigned int Grid\+::\+\_\+frequency\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classGrid}{Grid}} frequency in Hertz. \mbox{\Hypertarget{classGrid_a7f8ae48b23dff3b305abfacd62833ceb}\label{classGrid_a7f8ae48b23dff3b305abfacd62833ceb}} 
+\index{Grid@{Grid}!\_powerBought@{\_powerBought}}
+\index{\_powerBought@{\_powerBought}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{\_powerBought}{\_powerBought}}
+{\footnotesize\ttfamily unsigned int Grid\+::\+\_\+power\+Bought\hspace{0.3cm}{\ttfamily [private]}}
+
+Power that is bought from the grid in Watts. \mbox{\Hypertarget{classGrid_a854dae18966f8cf778a4457d4259f589}\label{classGrid_a854dae18966f8cf778a4457d4259f589}} 
+\index{Grid@{Grid}!\_powerSold@{\_powerSold}}
+\index{\_powerSold@{\_powerSold}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{\_powerSold}{\_powerSold}}
+{\footnotesize\ttfamily unsigned int Grid\+::\+\_\+power\+Sold\hspace{0.3cm}{\ttfamily [private]}}
+
+Power that is sold to the grid in Watts. \mbox{\Hypertarget{classGrid_ae4a0956bbe2c46bd90164246a57f9f14}\label{classGrid_ae4a0956bbe2c46bd90164246a57f9f14}} 
+\index{Grid@{Grid}!\_voltage@{\_voltage}}
+\index{\_voltage@{\_voltage}!Grid@{Grid}}
+\doxysubsubsection{\texorpdfstring{\_voltage}{\_voltage}}
+{\footnotesize\ttfamily unsigned int Grid\+::\+\_\+voltage\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classGrid}{Grid}} voltage in Volts. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Grid_8hpp}{Grid.\+hpp}}\item 
+src/Grid.\+cpp\end{DoxyCompactItemize}

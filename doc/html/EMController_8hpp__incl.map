@@ -1,0 +1,10 @@
+<map id="include/EMController.hpp" name="include/EMController.hpp">
+<area shape="rect" id="node1" title="Declaration of the EMController class." alt="" coords="136,5,320,32"/>
+<area shape="rect" id="node2" href="$Grid_8hpp.html" title="Declaration of the Grid class." alt="" coords="5,80,83,107"/>
+<area shape="rect" id="node3" href="$House_8hpp.html" title="Declaration of the House class." alt="" coords="107,80,197,107"/>
+<area shape="rect" id="node4" href="$PhotovoltaicPanel_8hpp.html" title="Declaration of the PhotovoltaicPanel class." alt="" coords="222,80,389,107"/>
+<area shape="rect" id="node5" href="$StorageSystem_8hpp.html" title="Declaration of the StorageSystem class." alt="" coords="413,80,563,107"/>
+<area shape="rect" id="node6" href="$BatteryModule_8hpp.html" title="Declaration of the BatteryModule class." alt="" coords="267,155,413,181"/>
+<area shape="rect" id="node7" href="$Inverter_8hpp.html" title="Declaration of the Inverter class." alt="" coords="438,155,538,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="562,155,625,181"/>
+</map>

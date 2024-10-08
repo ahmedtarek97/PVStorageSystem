@@ -26,7 +26,7 @@ public:
    *
    * @return int The surplus after charging the batteries with the max power
    */
-  int charge(int power);
+  int charge(const int &power);
 
   /**
    * @brief Discharge the Inverter
@@ -36,7 +36,7 @@ public:
    * @return int The power needed after discharging the batteries with the max
    * power
    */
-  int discharge(int power);
+  int discharge(const int &power);
 
 private:
   /**

@@ -20,7 +20,7 @@ public:
    *
    * @param power +ve value in Watts which the Grid will charge with
    */
-  void charge(int power);
+  void charge(const int &power);
 
   /**
    * @brief Discharge the Grid
@@ -28,7 +28,7 @@ public:
    * @param power -ve value in Watts which the Grid will discharge with
    *
    */
-  void discharge(int power);
+  void discharge(const int &power);
 
 private:
   /**

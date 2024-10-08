@@ -1,0 +1,119 @@
+\hypertarget{classStorageSystem}{}\doxysection{Storage\+System Class Reference}
+\label{classStorageSystem}\index{StorageSystem@{StorageSystem}}
+
+
+Storage system consists of an inverter, a controller and battery modules based on the system setup . It can release energy from the battery modules into the house grid or store energy from the house grid into the batterymodules.  
+
+
+
+
+{\ttfamily \#include $<$Storage\+System.\+hpp$>$}
+
+
+
+Collaboration diagram for Storage\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classStorageSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStorageSystem_a28c525bd478420fe5ec4848a24b2345c}\label{classStorageSystem_a28c525bd478420fe5ec4848a24b2345c}} 
+{\bfseries Storage\+System} (const \mbox{\hyperlink{classInverter}{Inverter}} \&inverter, const System\+Setup \&setup)
+\item 
+\mbox{\Hypertarget{classStorageSystem_a5355b2d6ce640a0fb4b638906c96a0bf}\label{classStorageSystem_a5355b2d6ce640a0fb4b638906c96a0bf}} 
+System\+Setup {\bfseries get\+System\+Setup} () const
+\item 
+bool \mbox{\hyperlink{classStorageSystem_a43ae70a644a258a02a0a9f4a6a3ff802}{add\+Battery\+Module}} (const \mbox{\hyperlink{classBatteryModule}{Battery\+Module}} \&battery\+Module)
+\begin{DoxyCompactList}\small\item\em Add battery module to the storage system if the system type allows it. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStorageSystem_a46794072323ff7fe6744abb97ff613d3}{charge}} (const int \&power)
+\begin{DoxyCompactList}\small\item\em Charge the Storage System Batteries. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStorageSystem_a0ed80e0bd3be88cd2732b3b58e7e39fc}{discharge}} (const int \&power)
+\begin{DoxyCompactList}\small\item\em Discharge the Storage System Batteries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStorageSystem_a66439cadcb783e100c7f0a1203fad4eb}\label{classStorageSystem_a66439cadcb783e100c7f0a1203fad4eb}} 
+\mbox{\hyperlink{classInverter}{Inverter}} {\bfseries \+\_\+inverter}
+\item 
+\mbox{\Hypertarget{classStorageSystem_ab5e961ee1a8fdb3dd0b1b1027033252f}\label{classStorageSystem_ab5e961ee1a8fdb3dd0b1b1027033252f}} 
+std\+::vector$<$ \mbox{\hyperlink{classBatteryModule}{Battery\+Module}} $>$ {\bfseries \+\_\+battery\+Modules}
+\item 
+\mbox{\Hypertarget{classStorageSystem_ae33cbe09e2986b37f089ec6c58ba1730}\label{classStorageSystem_ae33cbe09e2986b37f089ec6c58ba1730}} 
+System\+Setup \mbox{\hyperlink{classStorageSystem_ae33cbe09e2986b37f089ec6c58ba1730}{\+\_\+setup}}
+\begin{DoxyCompactList}\small\item\em Basic setup contains up to 2 battery modules. Standard setup contains up to 3 battery modules. Pro setup contains up to 5 battery modules. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStorageSystem_a497a8f00e36471cd7e440f3a89bea485}\label{classStorageSystem_a497a8f00e36471cd7e440f3a89bea485}} 
+int \mbox{\hyperlink{classStorageSystem_a497a8f00e36471cd7e440f3a89bea485}{\+\_\+power\+Command}}
+\begin{DoxyCompactList}\small\item\em if +ve value in Watts then batteries are charging if -\/ve value in Watts then battries are discharging \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Storage system consists of an inverter, a controller and battery modules based on the system setup . It can release energy from the battery modules into the house grid or store energy from the house grid into the batterymodules. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStorageSystem_a43ae70a644a258a02a0a9f4a6a3ff802}\label{classStorageSystem_a43ae70a644a258a02a0a9f4a6a3ff802}} 
+\index{StorageSystem@{StorageSystem}!addBatteryModule@{addBatteryModule}}
+\index{addBatteryModule@{addBatteryModule}!StorageSystem@{StorageSystem}}
+\doxysubsubsection{\texorpdfstring{addBatteryModule()}{addBatteryModule()}}
+{\footnotesize\ttfamily bool Storage\+System\+::add\+Battery\+Module (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBatteryModule}{Battery\+Module}} \&}]{battery\+Module }\end{DoxyParamCaption})}
+
+
+
+Add battery module to the storage system if the system type allows it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em battery\+Module} & Battery module which we want to add to the system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the battery module is added successfully 
+
+false if storage system reached the maximum number of battery modules based on the system setup 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStorageSystem_a46794072323ff7fe6744abb97ff613d3}\label{classStorageSystem_a46794072323ff7fe6744abb97ff613d3}} 
+\index{StorageSystem@{StorageSystem}!charge@{charge}}
+\index{charge@{charge}!StorageSystem@{StorageSystem}}
+\doxysubsubsection{\texorpdfstring{charge()}{charge()}}
+{\footnotesize\ttfamily int Storage\+System\+::charge (\begin{DoxyParamCaption}\item[{const int \&}]{power }\end{DoxyParamCaption})}
+
+
+
+Charge the Storage System Batteries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power} & +ve value in Watts which the system will charge with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The surplus after charging the batteries with the max power 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStorageSystem_a0ed80e0bd3be88cd2732b3b58e7e39fc}\label{classStorageSystem_a0ed80e0bd3be88cd2732b3b58e7e39fc}} 
+\index{StorageSystem@{StorageSystem}!discharge@{discharge}}
+\index{discharge@{discharge}!StorageSystem@{StorageSystem}}
+\doxysubsubsection{\texorpdfstring{discharge()}{discharge()}}
+{\footnotesize\ttfamily int Storage\+System\+::discharge (\begin{DoxyParamCaption}\item[{const int \&}]{power }\end{DoxyParamCaption})}
+
+
+
+Discharge the Storage System Batteries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power} & -\/ve value in Watts which the system will discharge with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The power needed after discharging the batteries with the max power 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{StorageSystem_8hpp}{Storage\+System.\+hpp}}\item 
+src/Storage\+System.\+cpp\end{DoxyCompactItemize}
