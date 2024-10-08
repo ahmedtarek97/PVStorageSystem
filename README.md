@@ -8,6 +8,11 @@ Dependancies of this project are:
 * gtest [for testing]
 * doxgen [for documintaion]
 
+## Development Environment
+* OS: Ubuntu 22.0.4
+* g++: 11.4.0
+* IDE: Vscode
+  
 ### Building
 * Use the command `./build.sh` to build the c++ development and testing files also the script will generate doxgen documintation 
 * Use the command `./test.sh` to run the provided test cases
