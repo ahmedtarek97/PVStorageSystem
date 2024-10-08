@@ -61,7 +61,3 @@ cmake ..
 
 # Build the project
 cmake --build .
-
-
-# Run the executable
-./PVSS

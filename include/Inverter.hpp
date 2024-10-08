@@ -23,6 +23,8 @@ public:
    * @brief Charge the Inverter
    *
    * @param power +ve value in Watts which the Inverter will charge with
+   *
+   * @return int The surplus after charging the batteries with the max power
    */
   int charge(int power);
 
@@ -31,7 +33,8 @@ public:
    *
    * @param power -ve value in Watts which the system will discharge with
    *
-   * @return
+   * @return int The power needed after discharging the batteries with the max
+   * power
    */
   int discharge(int power);
 

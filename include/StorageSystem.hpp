@@ -36,16 +36,17 @@ public:
    * @brief Charge the Storage System Batteries
    *
    * @param power +ve value in Watts which the system will charge with
-   * 
-   * @return
+   *
+   * @return int The surplus after charging the batteries with the max power
    */
   int charge(int power);
   /**
    * @brief Discharge the Storage System Batteries
    *
    * @param power -ve value in Watts which the system will discharge with
-   * 
-   * @return
+   *
+   * @return int The power needed after discharging the batteries with the max
+   * power
    */
   int discharge(int power);
 

@@ -12,8 +12,7 @@
  */
 class Grid {
 public:
-  Grid(const unsigned int &powerSold, const unsigned int &powerBought,
-       const unsigned int &voltage, const unsigned int &frequency);
+  Grid(const unsigned int &voltage, const unsigned int &frequency);
   unsigned int getPowerSold() const;
   unsigned int getPowerBought() const;
   /**
